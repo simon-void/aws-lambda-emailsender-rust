@@ -1,0 +1,23 @@
+[package]
+name = "aws-lambda-emailsender-rust"
+version = "0.1.0"
+edition = "2021"
+#authors = ["YOUR-<YOUR-EMAIL>"]
+#license = "YOUR-LICENSE"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+serde = "1"
+log = "0.4"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+# NOTE: the following crate is not part of the SDK, but it is maintained by AWS.
+lambda_runtime = "0.6"
+aws-config = "0.49"
+aws-sdk-sesv2 = "0.19"
+structopt = { version = "0.3", default-features = false }
+
+#[dependencies.structopt]
+#version = "0.3"
+#default-features = false
